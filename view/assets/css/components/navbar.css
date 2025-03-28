@@ -1,0 +1,17 @@
+header {
+    width: calc(100vw - 200px);
+    height: 68px;
+    background-color: #219ebc;
+    /* position: fixed;
+    right: 0; */
+    grid-column: 2;
+    grid-row: 1;
+}
+
+@media screen and (max-width: 490px) {
+    header {
+        width: 100vw;
+        height: 48px;
+        grid-column: 1;
+    }
+}
