@@ -2,9 +2,6 @@ footer {
     width: calc(100vw - 200px);
     height: 22px;
     background-color: #faedcd;
-    /* position: fixed;
-    right: 0;
-    bottom: 0; */
     grid-column: 2;
     grid-row: 3;
 }
