@@ -1,6 +1,6 @@
 <?php 
 
-class UsuasrioModel {
+class UsuarioModel {
     private $usuarios = [
         [
             'id' => 1,

@@ -144,9 +144,9 @@ $categorias = [
                             <form action="visualizar.php" method="GET">
                                 <input type="hidden" name="id" value="<?php echo $categoria['id'] ?>">
                                 <button>
-                                    <span class="material-symbols-outlined">
+                                    <a href="<?= APP_CONSTANTS['APP_URL'] . APP_CONSTANTS['PATH_PAGES'] . 'pages/categoria.php?id=' . $item['id'] ?>"><span class="material-symbols-outlined">
                                         visibility
-                                    </span>
+                                    </span></a>
                                 </button>
                             </form>
 
