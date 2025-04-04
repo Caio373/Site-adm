@@ -1,0 +1,19 @@
+.btn-icon {
+    padding: .25rem;
+    border-radius: 50%;
+    transition: box-shadow .4s;
+}
+
+.btn {
+    border: none;
+    background-color: unset;
+
+    padding: .75rem;
+    border-radius: var(--border-rounded);
+    color: var(--text-primary);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--text-white);
+}

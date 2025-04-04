@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $excluiu = $categoriaModel->excluir($_POST['id']);
 
         if ($excluiu) {
-            return header('Location: ' . APP_CONSTANTS['APP_URL'] . APP_CONSTANTS['PATH_PAGES'] . 'pages/categorias.php');  
+            return header('Location: ' . APP_CONSTANTS['APP_URL'] . APP_CONSTANTS['PATH_PAGES'] . 'categorias.php');  
         }
     }
 

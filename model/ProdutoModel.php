@@ -1,10 +1,9 @@
 <?php 
 
-require_once __DIR__ . '/CategoriaModel.php';
+require_once __DIR__ . "/../config/Database.php";
 
-class ProdutoModel {
-    private $categoriaModel;
-    private $tabela = "produto";
+class UsuarioModel {
+    private $tabela = "usuarios";
     private $conn;
 
     public function __construct(){
@@ -21,27 +20,40 @@ class ProdutoModel {
     }
 
     public function buscarPorId($id){
-        foreach ($this->produtos as $produto) {
-            if ($id == $produto['id']) {
-                return $produto;
-            }
-        } 
-        return NULL;
+        $query = "SELECT * FROM $this->tabela WHERE id = $id;";
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        return $stmt->fetch();
     }
 
-    private function popularProdutosComCategoria($produtos) {
-        $categorias = $this->categoriaModel->categorias;
-        $produtosPopulados = [];
+    public function criar($nome) {
+        $query = "INSERT INTO $this->tabela (nome) VALUES (:nome);";
 
-        foreach ($this->categoriaModel->categorias as $categoria) {
-            foreach ($produtos as $produto) {
-                if ($categoria['id'] == $produto['categoriaId']) {
-                    $produto['categoria'] = $categoria;
-                    array_push($produtosPopulados, $produto);
-                }
-            }
-        }
-        return $produtosPopulados;
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':nome', $nome);
+        $stmt->execute();
+
+        return $stmt->rowCount() > 0;
     }
 
+    public function editar($usuario) {
+        $query = "UPDATE $this->tabela set nome = :nome WHERE id = :id;";
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(":id", $usuario["id"]);
+        $stmt->bindParam(":nome", $usuario["nome"]);
+
+        return $stmt->rowCount() > 0;
+    }
+
+    public function excluir($id) {
+        $query = "DELETE FROM $this->tabela WHERE id = :id;";
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(":id", $id);
+        $stmt->execute();
+
+        return $stmt->rowCount() > 0;
+    }
 }

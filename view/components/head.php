@@ -11,15 +11,3 @@
     <link rel="stylesheet" href="/site-adm/view/assets/css/style.css">
 </head>
 
-<body>
-    <!-- <h1>Head</h1> -->
-</body>
-<?php require_once __DIR__ . '../components/navbar.php'; ?>
-
-<?php require_once __DIR__ . '../components/sidebar.php'; ?>
-
-<main>
-
-</main>
-
-<?php require_once __DIR__ . '../components/footer.php'; ?>

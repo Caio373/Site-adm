@@ -12,16 +12,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         $salvou = $categoriaModel->editar([
             'id' => $_POST['id'],
-            'nome' => $_POST['nome']
+            'nome' => $_POST['nome'],
+            'descricao' => $_POST['descricao']
         ]);
     }
 
     if ($salvou) {
-        header('Location: ' . APP_CONSTANTS['APP_URL'] . APP_CONSTANTS['PATH_PAGES'] . 'pages/categorias.php');    
+        header('Location: ' . APP_CONSTANTS['APP_URL'] . APP_CONSTANTS['PATH_PAGES'] . 'categorias.php');    
     } else {
         echo "ERRO";
     }
 
 } else {
-    header('Location: ' . APP_CONSTANTS['APP_URL'] . APP_CONSTANTS['PATH_PAGES'] . 'pages/categorias.php');
+    header('Location: ' . APP_CONSTANTS['APP_URL'] . APP_CONSTANTS['PATH_PAGES'] . 'categorias.php');
 }

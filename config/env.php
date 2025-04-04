@@ -1,6 +1,6 @@
 <?php 
 
-$filename = __DIR__ ."/../config/env.php";
+$filename = __DIR__ ."/../.env";
 $envsParsed = [];
 
 $envs = file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);

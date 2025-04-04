@@ -12,3 +12,30 @@ footer {
         grid-column: 1;
     }
 }
+
+/* f */
+.footer {
+    /* posicionamento na grid */
+    height: 22px;
+    grid-column: 2;
+    grid-row: 3;
+
+    font-size: .75rem;
+    padding: .25rem;
+    z-index: 10;
+    ;
+    
+    span {
+        display: block;
+        height: 100%;
+        text-align: right;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        /* posicionamento na grid */
+        height: 16px;
+        grid-column: 1;
+    }
+}

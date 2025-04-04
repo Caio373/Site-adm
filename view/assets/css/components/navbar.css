@@ -13,3 +13,41 @@ header {
         grid-column: 1;
     }
 }
+
+/* n */
+.navbar {
+    /* posicionamento na grid */
+    height: 68px;
+    grid-column: 2;
+    grid-row: 1;
+
+    background-color: var(--navbar-background-color);
+    z-index: 10;
+    ;
+
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+
+        img {
+            height: 48px;
+            border-radius: 25px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        /* posicionamento na grid */
+        height: 48px;
+        grid-column: 1;
+
+        nav {
+            img {
+                height: 38px;
+            }
+        }
+    }
+}

@@ -3,7 +3,7 @@
 require_once __DIR__ . "/../config/Database.php";
 
 class CategoriaModel {
-    private $tabela = "categoria";
+    private $tabela = "categorias";
     private $conn;
 
     public function __construct(){
