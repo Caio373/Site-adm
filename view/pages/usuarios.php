@@ -52,18 +52,22 @@ $usuarios = $usuarioModel->listar();
                     <form action="visualizar.php" method="GET">
                         <input type="hidden" name="id" value="<?php echo $usuario['id'] ?>">
                         <button>
-                            <span class="material-symbols-outlined">
-                                visibility
-                            </span>
+                            <a href="<?= APP_CONSTANTS['APP_URL'] . APP_CONSTANTS['PATH_PAGES'] . 'pages/usuario.php?id=' . $item['id'] ?>">
+                                <span class="material-symbols-outlined">
+                                    visibility
+                                </span>
+                            </a>
                         </button>
                     </form>
 
                     <form action="cadastro.php" method="GET">
                         <input type="hidden" name="id" value="<?php echo $usuario['id'] ?>">
                         <button>
-                            <span class="material-symbols-outlined">
-                                edit
-                            </span>
+                            <a href="">
+                                <span class="material-symbols-outlined">
+                                    edit
+                                </span>
+                            </a>
                         </button>
                     </form>
 

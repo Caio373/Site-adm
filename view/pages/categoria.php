@@ -33,7 +33,7 @@
         <h3>Categoria >> <?= $modo == 'EDICAO' ? 'Editar ' . $categoria['id'] : 'Criar' ?></h3>
 
         <div class="container">
-            <form class="form" method="POST" action="categoria_salvar.php">
+            <form class="form" method="POST" action="">
                 <div class="form-content">
                     <input name="id" type="hidden" value="<?= $categoria['id'] ?>">
 
